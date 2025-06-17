@@ -22,3 +22,8 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/test-auth', function () {
+    return dd(auth()->user());
+});
